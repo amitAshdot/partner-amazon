@@ -675,9 +675,8 @@ button.tablinks.tablinks-left.active {
 .form-input:placeholder-shown ~ .input-label {
   font-size: 25px;
   cursor: text;
-  top: 20%;
-  //   top: 50%;
-  //   transform: translateY(-50%) translateX(-15%);
+  top: 50%;
+  transform: translateY(-50%) translateX(-15%);
 }
 .input-label {
   position: absolute;
