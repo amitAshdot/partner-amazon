@@ -19,14 +19,14 @@ main {
   }
 }
 .mainContent {
-  background-image: url(../../images/0.png);
+  background-image: url(https://amitashdot.github.io/partner-amazon/images/0.png);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-color: #000000;
   background-size: contain;
 
   @include respond(mini-desktop) {
-    background-image: url(../../images/bg-mobile.png);
+    background-image: url(https://amitashdot.github.io/partner-amazon/images/bg-mobile.png);
   }
 }
 .head {
@@ -128,7 +128,7 @@ main {
       background-position: 0 0;
       background-size: contain;
       background-repeat: no-repeat;
-      background-image: url(../images/flag.png);
+      background-image: url(https://amitashdot.github.io/partner-amazon/images/flag.png);
       @include respond(mini-desktop) {
         position: absolute;
         left: 0;
@@ -306,33 +306,33 @@ main {
 }
 .card1 {
   //   background-position: 5% -15%;
-  background-image: url(../../images/1.png);
+  background-image: url(https://amitashdot.github.io/partner-amazon/images/1.png);
   background-size: cover;
 
   @include respond(mini-desktop) {
-    background-image: url(../../images/1-mobile.png);
+    background-image: url(https://amitashdot.github.io/partner-amazon/images/1-mobile.png);
     background-size: 100%;
   }
 }
 .card2 {
   //   background-position: 97% 241%;
 
-  background-image: url(../../images/2.png);
+  background-image: url(https://amitashdot.github.io/partner-amazon/images/2.png);
   background-size: cover;
 
   @include respond(mini-desktop) {
-    background-image: url(../../images/2-mobile.png);
+    background-image: url(https://amitashdot.github.io/partner-amazon/images/2-mobile.png);
     background-size: 104%;
   }
 }
 .card3 {
   //   background-position: 5% -1%;
 
-  background-image: url(../../images/3.png);
+  background-image: url(https://amitashdot.github.io/partner-amazon/images/3.png);
   background-size: cover;
 
   @include respond(mini-desktop) {
-    background-image: url(../../images/3-mobile.png);
+    background-image: url(https://amitashdot.github.io/partner-amazon/images/3-mobile.png);
     background-size: 100%;
   }
 
@@ -349,11 +349,11 @@ main {
 .card4 {
   //   background-position: 97% -16%;
 
-  background-image: url(../../images/4.png);
+  background-image: url(https://amitashdot.github.io/partner-amazon/images/4.png);
   background-size: cover;
 
   @include respond(mini-desktop) {
-    background-image: url(../../images/4-mobile.png);
+    background-image: url(https://amitashdot.github.io/partner-amazon/images/4-mobile.png);
     background-size: 100%;
     background-size: 140%;
     background-position-x: center;
@@ -372,11 +372,11 @@ main {
 .card5 {
   //   background-position: 5% -25%;
 
-  background-image: url(../../images/5.png);
+  background-image: url(https://amitashdot.github.io/partner-amazon/images/5.png);
   background-size: cover;
 
   @include respond(mini-desktop) {
-    background-image: url(../../images/5-mobile.png);
+    background-image: url(https://amitashdot.github.io/partner-amazon/images/5-mobile.png);
     background-size: 100%;
     background-size: 140%;
     background-position-x: center;
@@ -395,11 +395,11 @@ main {
 
 .card6 {
   //   background-position: 94% -16%;
-  background-image: url(../../images/6.png);
+  background-image: url(https://amitashdot.github.io/partner-amazon/images/6.png);
   background-size: cover;
 
   @include respond(mini-desktop) {
-    background-image: url(../../images/6-mobile.png);
+    background-image: url(https://amitashdot.github.io/partner-amazon/images/6-mobile.png);
     background-size: 100%;
   }
 
@@ -498,12 +498,14 @@ button {
   }
 }
 .tab-container {
-  background: url(../../images/leftTab.jpeg) top center no-repeat;
+  background: url(https://amitashdot.github.io/partner-amazon/images/leftTab.jpeg)
+    top center no-repeat;
   width: 100%;
   background-size: 100%;
 }
 .tab-container.changed {
-  background: url(../../images/rightTab.jpeg) top center no-repeat;
+  background: url(https://amitashdot.github.io/partner-amazon/images/rightTab.jpeg)
+    top center no-repeat;
   width: 100%;
   background-size: 100%;
 }
