@@ -1232,7 +1232,7 @@ button.tablinks.tablinks-left.active {
 
 /* line 632, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
 .padding {
-  padding: 0 5%;
+  padding: 3rem 5%;
 }
 
 /* line 635, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
@@ -1272,7 +1272,7 @@ button.tablinks.tablinks-left.active {
   border: 0;
   outline: 0;
   font-size: 25px;
-  padding: 2.5rem 0;
+  padding: 20px 0;
   background: transparent;
   transition: border-color 0.2s;
 }
