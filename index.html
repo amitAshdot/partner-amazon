@@ -1,0 +1,666 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="מידע עסקי ופיננסי מעודכן במגוון נושאים: הבורסה בתל אביב, וול סטריט ושוקי עולם, ביטוח ופיננסים, היי טק, צרכנות, משפט, ספורט, סביבה ועוד "
+    />
+    <meta name="msapplication-tooltip" content="גלובס זירת העסקים של ישראל" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/index.css"
+      media="screen"
+    />
+    <title>
+      מינוי דיגיטלי יומולדת - גלובס
+    </title>
+    <meta name="keywords" content="Targetcall, טרגטקול, טרגט קול" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://images.globes.co.il/globes/icons/favicon2019-he.png"
+      sizes="64x64"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Simpler-Regular.woff"
+      as="font"
+      crossorigin
+    />
+    <link rel="preload" href="/fonts/Simpler-Bold.woff" as="font" crossorigin />
+    <link rel="preload" href="/fonts/Simpler-Bold.woff" as="font" crossorigin />
+    <link rel="preload" as="image" href="/images/baloon-01.png" />
+    <link
+      rel="preload"
+      as="image"
+      href="https://globes.site/images/hagiga-final2.png"
+    />
+    <!-- onandoff-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://onandoff.co.il/onAndOff.js"
+    ></script>
+    <!-- End onandoff-->
+  </head>
+
+  <body>
+    <header class="header"></header>
+    <main>
+      <!-- MAIN HEADER START -->
+      <div class="u-desktop" id="left">
+        <div class="form-area">
+          <div>
+            <section id="form_section">
+              <a href="https://www.yes.co.il/Pages/sales/triple/TripleNew.aspx">
+                לקוחות קיימים? לפרטים ועדכון התכנית לחצו כאן
+              </a>
+              <div class="tab-container changed">
+                <div class="tab">
+                  <button
+                    class="tablinks tablinks-left active"
+                    onclick="openCity(event, 'notCustomer')"
+                  >
+                    לא לקוח פרטנר
+                  </button>
+                  <button
+                    class="tablinks tablinks-right"
+                    onclick="openCity(event, 'customer')"
+                  >
+                    לקוח פרטנר
+                  </button>
+                </div>
+              </div>
+
+              <div id="notCustomer" class="tabcontent" style="display: block;">
+                <form class="myForm_float" action="" method="post">
+                  <input
+                    type="hidden"
+                    id="uid"
+                    name="uid"
+                    value="7525E66C-257D-4C46-9D5B-E5E5DD886A06"
+                  />
+                  <!--<img src="img/mobile.jpg" class="mobile" alt="" style="object-fit: contain;   width: 100%;">-->
+                  <h2 class="joinusfrom">השאירו פרטים ונציג יחזור אליכם:</h2>
+                  <div class="input-wrapper full_name-wrap">
+                    <input
+                      type="text"
+                      id="firstname"
+                      class="form-input fancy-label-field"
+                      name="firstname"
+                      value=""
+                      placeholder=" "
+                      required=""
+                      oninput="onInputChange()"
+                    />
+                    <label for="firstname" class="input-label">
+                      <span class="field-label">שם מלא:</span>
+                    </label>
+                  </div>
+
+                  <div class="input-wrapper phone-wrap">
+                    <div class="input-phone-wrap">
+                      <input
+                        type="text"
+                        id="telephone1"
+                        class="form-input ltr fancy-label-field"
+                        name="telephone1"
+                        value=""
+                        placeholder=" "
+                        required=""
+                        oninput="onInputChange()"
+                      />
+                      <label for="telephone1" class="input-label">
+                        <span class="field-label">טלפון:</span>
+                      </label>
+                    </div>
+                  </div>
+                  <input
+                    type="hidden"
+                    name="systemfield312"
+                    id="systemfield312"
+                    value="10"
+                  />
+                  <div class="input-wrapper sumbit-wrap">
+                    <input
+                      type="submit"
+                      class="shk"
+                      value="נשמע מעניין! תתקשרו אלי"
+                    />
+                  </div>
+                </form>
+              </div>
+
+              <div class="tabcontent-exist">
+                <div class="padding">
+                  <h3>כבר יש לכם yes?</h3>
+                  <p>מעולה!</p>
+                  <p>הצטרפו ל- yesULTIMATE ותקבלו יותר בפחות!</p>
+                  <a
+                    href="tel:*2080"
+                    id="notCustomer__link"
+                    target="_blank"
+                    class="blue-text"
+                    title="לפרטים והצטרפות"
+                    >חייגו *2080</a
+                  >
+                </div>
+              </div>
+            </section>
+
+            <div class="haygu glow desktop hide-if-popup">
+              לשיחה עם נציג עכשיו חייגו: <br />
+              <span id="phoneddNumber">072-3969966</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="mainContent">
+          <div class="head">
+            <img
+              src="images/logo5g.png"
+              alt="פרטנר אמאזון"
+              title="partner logo"
+              class="head-logo u-mobile"
+            />
+            <div class="head-info">
+              <h1 class="head-info__title">
+                <span class="head-info__title-blue">מצטרפים לפרטנר TV</span>
+                <span class="head-info__title-price">
+                  <span class="huge">
+                    <sub>ב-</sub>
+                    99
+                    <span class="month">₪<br />לחודש</span>
+                  </span>
+                </span>
+                <span class="head-info__title-get">ומקבלים</span>
+                <span class="head-info__title-amazon"
+                  ><img
+                    src="images/amazonPrimeLogo.png"
+                    alt="אמזון פריים וידאו"
+                    title=""
+                    class="netflixLogo"
+                /></span>
+
+                <span class="head-info__title-period">ל-6 חודשים עלינו</span>
+                <span class="head-info__title-cond">* בכפוף לתנאים המלאים</span>
+                <span class="head-info__title-cond"
+                  >לאחר מכן ב-19.90 ₪ לחודש</span
+                >
+              </h1>
+              <div class="head-info-flag">+3<span>ממירים</span></div>
+            </div>
+          </div>
+          <!-- MOBILE FORM START -->
+          <div class="u-mobile">
+            <div class="form-area">
+              <div>
+                <section id="form_section">
+                  <h3 class="form_section-title blue-text">
+                    כמה פרטים ואתם בדרך לעולם חדש של תכנים
+                  </h3>
+                  <div class="tab-container changed">
+                    <div class="tab">
+                      <button
+                        class="tablinks tablinks-left active"
+                        onclick="openCity(event, 'notCustomer')"
+                      >
+                        לא לקוח פרטנר
+                      </button>
+                      <button
+                        class="tablinks tablinks-right"
+                        onclick="openCity(event, 'customer')"
+                      >
+                        לקוח פרטנר
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    id="notCustomer"
+                    class="tabcontent"
+                    style="display: block;"
+                  >
+                    <form class="myForm_float" action="" method="post">
+                      <input
+                        type="hidden"
+                        id="uid"
+                        name="uid"
+                        value="7525E66C-257D-4C46-9D5B-E5E5DD886A06"
+                      />
+                      <!--<img src="img/mobile.jpg" class="mobile" alt="" style="object-fit: contain;   width: 100%;">-->
+                      <h2 class="joinusfrom">
+                        השאירו פרטים ונציג יחזור אליכם:
+                      </h2>
+                      <div class="input-wrapper full_name-wrap">
+                        <input
+                          type="text"
+                          id="firstname"
+                          class="form-input fancy-label-field"
+                          name="firstname"
+                          value=""
+                          placeholder=" "
+                          required=""
+                          oninput="onInputChange()"
+                        />
+                        <label for="firstname" class="input-label">
+                          <span class="field-label">שם מלא:</span>
+                        </label>
+                      </div>
+
+                      <div class="input-wrapper phone-wrap">
+                        <div class="input-phone-wrap">
+                          <input
+                            type="text"
+                            id="telephone1"
+                            class="form-input ltr fancy-label-field"
+                            name="telephone1"
+                            value=""
+                            placeholder=" "
+                            required=""
+                            oninput="onInputChange()"
+                          />
+                          <label for="telephone1" class="input-label">
+                            <span class="field-label">טלפון:</span>
+                          </label>
+                        </div>
+                      </div>
+                      <input
+                        type="hidden"
+                        name="systemfield312"
+                        id="systemfield312"
+                        value="10"
+                      />
+                      <div class="input-wrapper sumbit-wrap">
+                        <input
+                          type="submit"
+                          class="shk"
+                          value="נשמע מעניין! תתקשרו אלי"
+                        />
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="tabcontent-exist">
+                    <div class="padding">
+                      <h3>כבר יש לכם yes?</h3>
+                      <p>מעולה!</p>
+                      <p>הצטרפו ל- yesULTIMATE ותקבלו יותר בפחות!</p>
+                      <a
+                        href="tel:*2080"
+                        id="notCustomer__link"
+                        target="_blank"
+                        class="blue-text"
+                        title="לפרטים והצטרפות"
+                        >חייגו *2080</a
+                      >
+                    </div>
+                  </div>
+                </section>
+
+                <div class="haygu glow desktop hide-if-popup">
+                  לשיחה עם נציג עכשיו חייגו: <br />
+                  <span id="phoneddNumber">072-3969966</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MOBILE FORM END -->
+          <!-- CAROUSEL START -->
+          <div class="carousel-section">
+            <h2 class="carousel-title">
+              הסדרות והסרטים זוכי הפרסים של אמזון פריים וידאו כבר כאן
+            </h2>
+            <div class="carousel">
+              <div class="series">
+                <div class="flex-container-series">
+                  <div>
+                    <img src="/images/picslide_1.jpeg" alt="" title="" />
+                  </div>
+                  <div>
+                    <img src="/images/picslide_2.jpeg" alt="" title="" />
+                  </div>
+                  <div>
+                    <img src="/images/picslide_3.jpeg" alt="" title="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CAROUSEL END -->
+          <!-- SOON START -->
+          <div class="soon">
+            <h3 class="soon-title blue-text">
+              <span>עם כאלה פיצ'רים, באמת לא תרצו לקום מהספה</span>
+            </h3>
+            <div class="soon-flex">
+              <div class="soon__card card1">
+                <div class="soon__card-title">
+                  <p><span>בלעדי</span> באמזון פריים וידאו</p>
+                </div>
+                <div class="u-margin-top-medium">
+                  <div class="soon__card-text">
+                    <p class="blue-text">
+                      X-RAY: כל מה המידע על מה שאתם צופים!
+                    </p>
+                    <p>
+                      התחברו בלחיצת כפתור למאגר וקבלו מידע בזמן אמת על התוכן
+                      שאתם צופים: שחקנים, מוזיקה, פרטי טריוויה ועוד!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="soon__card card2">
+                <div class="soon__card-title">
+                  <p><span>בלעדי</span> באמזון פריים וידאו</p>
+                </div>
+                <div class="u-margin-top-medium">
+                  <div class="soon__card-text-left">
+                    <p class="blue-text">
+                      מסיבת צפייה: לצפות עם חברים, גם מרחוק
+                    </p>
+                    <p>
+                      צפו עם חברים שלא נמצאים לידכם באותו מקום כשכל אחד מכם יכול
+                      לשנות את הכתוביות או הדיבוב לפי רצונו ואפילו תוכלו להתכתב
+                      בצ'ט בזמן הצפייה.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="soon__card card3">
+                <div class="u-margin-top-medium">
+                  <img
+                    src="images/icoSoon_1.png"
+                    alt=""
+                    title=""
+                    class="myIco"
+                  />
+                  <div class="soon__card-text">
+                    <p class="blue-text">
+                      X-RAY: כל מה המידע על מה שאתם צופים!
+                    </p>
+                    <p>
+                      התחברו בלחיצת כפתור למאגר וקבלו מידע בזמן אמת על התוכן
+                      שאתם צופים: שחקנים, מוזיקה, פרטי טריוויה ועוד!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="soon__card card4">
+                <div class="u-margin-top-medium">
+                  <img
+                    src="images/icoSoon_2.png"
+                    alt=""
+                    title=""
+                    class="myIco"
+                  />
+                  <div class="soon__card-text-left">
+                    <p class="blue-text">
+                      חווית צפייה באיכות מקסימלית
+                    </p>
+                    <p>
+                      הממירים של פרטנר תומכים בשידורים וברזולוציית 4K המאפשרים
+                      לך לצפות בסרטים, סדרות ותוכניות באיכות צפייה מקסימלית.
+                      תמונה חדה ומציאותית יותר. לראות כל פרט קטן אשר יוצג על גבי
+                      מסך הטלוויזיה שלך ובאיכות שלא הכרת קודם.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="soon__card card5">
+                <div class="u-margin-top-medium">
+                  <img
+                    src="images/icoSoon_3.png"
+                    alt=""
+                    title=""
+                    class="myIco"
+                  />
+                  <div class="soon__card-text">
+                    <p class="blue-text">
+                      CATCH UP - שירות הקלטה אוטומטי 14 יום
+                    </p>
+                    <p>
+                      פספסתם כתבה מעניינת במהדורת החדשות? רוצים לחזור לרגע מרגש
+                      בריאליטי האהוב עליכם? יש לכם שבועיים שלמים מזמן השידור
+                      המקורי לצרוך את כל אלה. בכל רגע שתרצו.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="soon__card card6">
+                <div class="u-margin-top-medium">
+                  <img
+                    src="images/icosoon_4.png"
+                    alt=""
+                    title=""
+                    class="myIco"
+                  />
+                  <div class="soon__card-text-left">
+                    <p class="blue-text">
+                      בכל זמן ומכל מכשיר
+                    </p>
+                    <p>
+                      הטלוויזיה הפתוחה מאפשרת לך לראות טלוויזיה בכל זמן ובכל
+                      מכשיר, אפשר להתחבר לעד- 5 אמצעי צפייה- ממיר, טלוויזיות,
+                      SMART TV, סלולר וטאבלט לבחירתך.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SOON END -->
+        </div>
+
+        <!-- LEGAL TEXT START-->
+        <div class="txtMishpati">
+          <h3>&nbsp;</h3>
+          <div class="mishpati">
+            <span>•</span> בכפוף לתנאי התכנית המלאים ולתנאי ההתקשרות הכללים
+            לשירותים המסופקים, הניתנים לעיון באתר פרטנר, ובקיומו של ציוד תומך
+            ותשתית תומכת <span>•</span> שירות הטלוויזיה מאפשר שימוש באמצעות עד 5
+            אמצעי צפייה ללקוח (ממיר, שימוש באפליקציה למכשיר נייד תומך)
+            <span>•</span> 3 ממירים ללא תשלום במסגרת התוכנית, תוספת תשלום עבור
+            כל ממיר נוסף (סה"כ עד 5) 15 ₪ לחודש <span>•</span> שירות הטלוויזיה
+            מחייב תשתית אינטרנט במהירות 10Mb לפחות לכל ממיר וכניסת HDMI בכל
+            טלוויזיה בה יותקן השירות <span>•</span> פרטנר רשאית לשנות את תנאי
+            ותעריפי התכנית או לבטלה בכל עת <span>•</span> חברת פרטנר תקשורת בע"מ
+            ח.צ. 52004431
+          </div>
+        </div>
+        <div class="txtMishpati">
+          <h3>אמזון פריים וידאו:</h3>
+          <div class="mishpati">
+            <span>•</span> כרוך במנוי Amazon Prime Video חדש, בהתאם לתנאיו
+            המלאים, הניתנים לעיון ב – primevideo.com כפי שיעודכנו מעת לעת
+            <span>•</span> הטבת 6 חודשים בחסות פרטנר תקפה במסגרת הצטרפות למנוי-
+            Amazon Prime Video חדש, אשר ישולם לאחר תקופת ההטבה באמצעות חשבונית
+            פרטנר <span>•</span> ההטבה הינה אישית וחד-פעמית ללקוח פרטנר TV,
+            ואינה ניתנת לצבירה או להעברה לאחר <span>•</span> לאחר 6 חודשים
+            התשלום עבור Amazon Prime Video הינו 19.9 ₪ לחודש <span>•</span> כלל
+            סימני המסחר והלוגואים הינם בבעלות
+            <a href="https://www.amazon.com" target="_blank">amazon.com</a>, lnc
+            או התאגידים הקשורים אליה
+          </div>
+        </div>
+        <!-- LEGAL TEXT END-->
+      </div>
+      <!-- MAIN HEADER END -->
+    </main>
+
+    <footer class="footer">
+      <div class="footer-contact"></div>
+    </footer>
+    <!-- ONANDOFF -->
+    <script type="text/javascript">
+      // timerPlus("6048ff9c8e7cde0017c82ba9");
+      // timerPlus("604f86eebcc82e00179fb190");
+
+      const d = new Date();
+      const currentHour = d.getHours(); //note 0-23
+      const cta = document.getElementsByClassName("cta");
+      const width = document.body.scrollWidth; //for mobile devices
+      const sunday = 0;
+      const friday = 5;
+      if (
+        currentHour > 9 &&
+        currentHour < 20 &&
+        width < 900 &&
+        d.getDay() >= sunday &&
+        d.getDay() < friday
+      ) {
+        cta[0].style.display = "block";
+      } else {
+        cta[0].style.display = "none";
+      }
+    </script>
+    <!-- END ONANDOFF -->
+
+    <!-- URL PARAMS HANDLE -->
+    <script>
+      //get url params
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const locationNum = urlParams.get("locationNum");
+      const site = urlParams.get("site");
+      const from = urlParams.get("from");
+      const search = urlParams.get("utm_campaign");
+      let inputLocation = document.getElementsByClassName("systemfield12");
+      let inputSite = document.getElementsByClassName("systemfield52");
+      let inputFrom = document.getElementsByClassName("originatingleadcode");
+      let inputSearchOrGdn = document.getElementsByClassName("utm_campaign");
+
+      let locationArray = [...inputLocation];
+      let siteArray = [...inputSite];
+      let fromArray = [...inputFrom];
+      let searchOrGdnArray = [...inputSearchOrGdn];
+
+      locationArray.map(item => (item.value = locationNum));
+      siteArray.map(item => (item.value = site));
+      fromArray.map(item => (item.value = from));
+      searchOrGdnArray.map(item => (item.value = search));
+    </script>
+    <!-- END URL PARAMS HANDLE -->
+
+    <!-- ACCORDION HANDLE -->
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+    <!-- END ACCORDION HANDLE -->
+    <!--  HANDLE ERROR -->
+    <script>
+      (function() {
+        var name = document.getElementById("accountname");
+        var phone = document.getElementById("telephone1");
+        var form = document.getElementsByClassName("form");
+        var elem = document.createElement("div");
+        elem.id = "notify";
+        elem.style.display = "none";
+
+        form[0].appendChild(elem);
+
+        name.addEventListener("invalid", function(event) {
+          event.preventDefault();
+          if (!event.target.validity.valid) {
+            name.className = "form-input form-input-error";
+            elem.textContent = "אנא מלא/י את השדות בהתאם";
+            elem.className = "error";
+            elem.style.display = "block";
+          }
+        });
+
+        name.addEventListener("input", function(event) {
+          name.className = "form-input";
+          elem.style.display = "none";
+        });
+
+        phone.addEventListener("invalid", function(event) {
+          event.preventDefault();
+          if (!event.target.validity.valid) {
+            phone.className = "form-input form-input-error";
+            elem.textContent = "אנא מלא/י את השדות בהתאם";
+            elem.className = "error";
+            elem.style.display = "block";
+          }
+        });
+
+        phone.addEventListener("input", function(event) {
+          phone.className = "form-input";
+          elem.style.display = "none";
+        });
+      })();
+    </script>
+    <!-- END HANDLE ERROR -->
+
+    <script>
+      var showfirst = document.getElementById("notCustomer");
+      showfirst.style.display = "block";
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        var tabContainer = document.getElementsByClassName("tab-container");
+        for (i = 0; i < tabContainer.length; i++) {
+          if (cityName !== "notCustomer") {
+            tabContainer[i].classList.remove("changed");
+          } else {
+            tabContainer[i].classList.add("changed");
+          }
+        }
+
+        tabcontent = document.getElementsByClassName("tabcontent");
+        tabContentExist = document.getElementsByClassName("tabcontent-exist");
+
+        for (i = 0; i < tabcontent.length; i++) {
+          if (tabContainer[0].classList[1] !== "changed") {
+            tabcontent[i].style.display = "none";
+            tabContentExist[0].style.display = "block";
+          } else {
+            tabcontent[i].style.display = "block";
+            tabContentExist[0].style.display = "none";
+          }
+        }
+
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+    <!-- HANDLE PROTOCOL TO HTTPS -->
+    <!-- <script>
+      // if (location.protocol !== "https:") {
+      //   location.replace(
+      //     `https:${location.href.substring(location.protocol.length)}`
+      //   );
+      // }
+      if (location.protocol !== "https:") {
+          location.replace(window.location.href.replace("http:", "https:"));
+        }
+    </script> -->
+
+    <!-- HANDLE PROTOCOL TO HTTPS -->
+  </body>
+</html>

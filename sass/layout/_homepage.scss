@@ -1,0 +1,709 @@
+main {
+  display: flex;
+  flex-direction: row-reverse;
+  background: $color-black;
+  justify-content: center;
+  color: $color-white;
+}
+.left-section {
+  width: 20%;
+  flex-grow: 0.2;
+}
+.right-section {
+  margin-inline-end: auto;
+  max-width: 78vw;
+  position: relative;
+
+  @include respond(mini-desktop) {
+    max-width: 100vw;
+  }
+}
+.mainContent {
+  background-image: url(../../images/0.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-color: #000000;
+  background-size: contain;
+
+  @include respond(mini-desktop) {
+    background-image: url(../../images/bg-mobile.png);
+  }
+}
+.head {
+  &-logo {
+    width: 35%;
+    float: left;
+  }
+  &-info {
+    display: flex;
+    align-items: flex-end;
+    padding: 5rem 0;
+    @include respond(mini-desktop) {
+      margin-top: 60vw;
+    }
+    &__title {
+      //   position: absolute;
+      //   top: 1%;
+      //   left: 6%;
+      margin-right: auto;
+      z-index: 1;
+      width: 30%;
+      color: #ffffff;
+      font-size: 1.5rem;
+      /* text-shadow: 0px 0px 10px #2cd5c4; */
+      border: 0px solid green;
+
+      @include respond(mini-desktop) {
+        width: 100%;
+      }
+
+      & > span {
+        width: 100%;
+        line-height: 100%;
+        display: inline-block;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      &-blue {
+        color: $color-primary;
+        font-size: 2vw;
+        font-family: "simpler-bold";
+        @include respond(mini-desktop) {
+          font-size: 8vw;
+        }
+      }
+      &-price {
+        color: $color-primary;
+        font-size: 2vw;
+        margin: 1% 0 0 0;
+        text-align: right;
+      }
+      &-get {
+        color: #2cd5c4;
+        font-size: 3vw;
+        margin: -5% 0 0 0;
+        font-family: "simpler-bold";
+        display: block;
+        text-align: center;
+        @include respond(mini-desktop) {
+          font-size: 1.8em;
+        }
+      }
+      &-amazon {
+        margin: 4% 0 0 0;
+        & > img {
+          width: 60%;
+          margin: 0 auto;
+        }
+      }
+      &-period {
+        font-size: 2.5vw;
+        font-family: "simpler-bold";
+        margin: 0.5em 0 0 0;
+        //   text-shadow: 0px 0px 12px #ffffff;
+
+        @include respond(mini-desktop) {
+          font-size: 6.5vw;
+        }
+      }
+      &-cond {
+        font-size: 1.5rem;
+        margin: 2% 0 0 0;
+        @include respond(mini-desktop) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    &-flag {
+      color: $color-black;
+      text-align: left;
+      //   position: absolute;
+      //   top: 25vw;
+      //   left: 0;
+      font-size: 2.4vw;
+      line-height: 90%;
+      padding: 1% 2% 0.5% 1%;
+      font-family: "simpler-black";
+      background-position: 0 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(../images/flag.png);
+      @include respond(mini-desktop) {
+        position: absolute;
+        left: 0;
+        width: 24%;
+        font-size: 3em;
+        padding: 2% 3% 2% 2%;
+        background-size: cover;
+      }
+      & > span {
+        display: block;
+        font-size: 0.5em;
+        line-height: 100%;
+        font-family: "simpler-bold";
+      }
+    }
+  }
+}
+.carousel-section {
+  padding: 5rem 0;
+}
+.carousel {
+  display: block;
+  margin-top: 12vh;
+  padding: 5rem 0;
+
+  text-align: center;
+  //   position: absolute;
+  //   top: 18%;
+  //   right: 0;
+  //   left: 0;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0px solid red;
+
+  &-title {
+    // position: absolute;
+    // top: 15%;
+    // right: 0;
+    left: 0;
+    width: 32%;
+    margin: 0 auto;
+    color: #ffffff;
+    line-height: 115%;
+    font-size: 1.9em;
+    text-align: center;
+    @include respond(mini-desktop) {
+      width: 100%;
+    }
+  }
+}
+.flex-container-series {
+  display: flex;
+  justify-content: space-evenly;
+  @include respond(mini-desktop) {
+    & > div > img {
+      width: 90%;
+    }
+  }
+}
+.soon {
+  width: 100%;
+  //   margin: 78.5% auto 0 auto;
+  display: inline-block;
+  &-title {
+    font-size: 2em;
+    text-align: center;
+
+    @include respond(mini-desktop) {
+      width: 82%;
+      margin: auto;
+    }
+  }
+  &-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 0 0 0;
+    padding-top: 2%;
+    & > div {
+      position: relative;
+      width: 80%;
+      //   height: 16em;
+      margin: 0 0 5.1% 0;
+      background-repeat: no-repeat;
+      //   filter: drop-shadow(0px 0px 16px #2ad5c4);
+      //   filter: drop-shadow(0px 0px 16px rbga($color-primary, 0.5));
+      filter: drop-shadow(0 0rem 2rem rgba($color-primary, 0.4));
+      @include respond(mini-desktop) {
+        filter: drop-shadow(0 0rem 1rem rgba($color-primary, 0.4));
+      }
+
+      &:last-child {
+        margin: 0 0 3.1% 0;
+        @include respond(big-desktop) {
+          margin: 0;
+        }
+      }
+
+      @include respond(big-desktop) {
+        margin: 0 0 12.1% 0;
+      }
+      @include respond(normal-desktop) {
+      }
+      @include respond(small-desktop) {
+      }
+      @include respond(tab-land) {
+      }
+      @include respond(mini-desktop) {
+        width: 90%;
+      }
+      @include respond(tab-port) {
+      }
+      @include respond(phone) {
+      }
+      @include respond(phone-small) {
+      }
+    }
+  }
+  &__card {
+    &-title {
+      position: absolute;
+      top: 16%;
+      right: 0;
+      width: 100%;
+      text-align: right;
+      display: inline-block;
+      color: $color-black;
+      line-height: normal;
+      @include respond(mini-desktop) {
+        top: 0%;
+        display: contents;
+      }
+
+      & > p {
+        text-align: right;
+        font-size: 2.5rem;
+        background: #2cd5c4;
+        display: inline-block;
+        padding: 0.5% 1% 0.5% 1%;
+        font-family: "simpler-bold";
+        & > span {
+          @include respond(mini-desktop) {
+            display: block;
+            font-size: 1.4em;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+    &-text {
+      width: 50%;
+      float: right;
+      margin: 0 3% 0 0;
+      text-align: right;
+      display: inline-block;
+      @include respond(mini-desktop) {
+        line-height: 1.7rem;
+        font-size: 1.5rem;
+      }
+
+      &-left {
+        width: 50%;
+        float: left;
+        display: inline-block;
+        margin: 0 0 0 3%;
+
+        @include respond(mini-desktop) {
+          line-height: 1.7rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+.card1 {
+  //   background-position: 5% -15%;
+  background-image: url(../../images/1.png);
+  background-size: cover;
+
+  @include respond(mini-desktop) {
+    background-image: url(../../images/1-mobile.png);
+    background-size: 100%;
+  }
+}
+.card2 {
+  //   background-position: 97% 241%;
+
+  background-image: url(../../images/2.png);
+  background-size: cover;
+
+  @include respond(mini-desktop) {
+    background-image: url(../../images/2-mobile.png);
+    background-size: 104%;
+  }
+}
+.card3 {
+  //   background-position: 5% -1%;
+
+  background-image: url(../../images/3.png);
+  background-size: cover;
+
+  @include respond(mini-desktop) {
+    background-image: url(../../images/3-mobile.png);
+    background-size: 100%;
+  }
+
+  & > .u-margin-top-medium > img {
+    width: 7%;
+    height: auto;
+    display: block;
+    margin: 0 5% 0 0;
+    @include respond(mini-desktop) {
+      width: 18%;
+    }
+  }
+}
+.card4 {
+  //   background-position: 97% -16%;
+
+  background-image: url(../../images/4.png);
+  background-size: cover;
+
+  @include respond(mini-desktop) {
+    background-image: url(../../images/4-mobile.png);
+    background-size: 100%;
+    background-size: 140%;
+    background-position-x: center;
+  }
+
+  & > .u-margin-top-medium > img {
+    width: 7%;
+    height: auto;
+    display: block;
+    margin: 0 46% 0 0;
+    @include respond(mini-desktop) {
+      width: 18%;
+    }
+  }
+}
+.card5 {
+  //   background-position: 5% -25%;
+
+  background-image: url(../../images/5.png);
+  background-size: cover;
+
+  @include respond(mini-desktop) {
+    background-image: url(../../images/5-mobile.png);
+    background-size: 100%;
+    background-size: 140%;
+    background-position-x: center;
+  }
+
+  & > .u-margin-top-medium > img {
+    width: 7%;
+    height: auto;
+    display: block;
+    margin: 0 5% 0 0;
+    @include respond(mini-desktop) {
+      width: 18%;
+    }
+  }
+}
+
+.card6 {
+  //   background-position: 94% -16%;
+  background-image: url(../../images/6.png);
+  background-size: cover;
+
+  @include respond(mini-desktop) {
+    background-image: url(../../images/6-mobile.png);
+    background-size: 100%;
+  }
+
+  & > .u-margin-top-medium > img {
+    width: 7%;
+    height: auto;
+    display: block;
+    margin: 0 46% 0 0;
+    @include respond(mini-desktop) {
+      width: 18%;
+    }
+  }
+}
+
+.txtMishpati {
+  width: 100%;
+  background: #000000;
+  padding: 0% 5% 2% 5%;
+  display: inline-block;
+  box-sizing: border-box;
+
+  h3 {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: right;
+    font-family: "simpler-black";
+  }
+}
+.mishpati {
+  width: 100%;
+  color: #ffffff;
+  font-size: 1em;
+  line-height: 120%;
+  text-align: justify;
+  margin: 1% auto 0 auto;
+  box-sizing: border-box;
+
+  a {
+    color: #2cd5c4;
+    text-decoration: none;
+    transition: 0.5s all;
+  }
+}
+
+/* */
+#left {
+  display: block;
+  font-size: 20px;
+  width: 22vw;
+  position: relative;
+  left: 0;
+  top: 0px;
+
+  overflow: hidden;
+  background: #262626;
+  z-index: 2;
+  flex-shrink: 0;
+}
+#left #form,
+#left #form_section {
+  /* position: absolute; */
+  overflow: hidden;
+  padding: 15px 0px;
+  top: 0;
+  width: 100%;
+}
+
+a,
+button {
+  background-color: transparent;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  display: flex;
+}
+.haygu.glow.desktop.hide-if-popup {
+  text-align: center;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  transition: 0.3s;
+  /*font-size: 17px;*/
+  font-size: 1vw;
+  flex-grow: 0.4;
+
+  @include respond(mini-desktop) {
+    font-size: 4.5vw;
+  }
+}
+.tab-container {
+  background: url(../../images/leftTab.jpeg) top center no-repeat;
+  width: 100%;
+  background-size: 100%;
+}
+.tab-container.changed {
+  background: url(../../images/rightTab.jpeg) top center no-repeat;
+  width: 100%;
+  background-size: 100%;
+}
+
+.tablinks-left {
+}
+.tablinks-right {
+}
+
+#left #form,
+#left #form_section {
+  position: absolute;
+  overflow: hidden;
+  padding: 15px 0px;
+  top: 0;
+}
+.form-area {
+  position: fixed;
+  padding: 0;
+  height: 100%;
+  width: 22%;
+
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+
+  @include respond(mini-desktop) {
+    position: initial;
+    width: 100%;
+    background: #262626;
+    padding: 3rem 2%;
+    height: auto;
+    color: $color-white;
+  }
+}
+.joinusfrom {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#left .input-wrapper {
+  height: 50px;
+  margin: 20px 0px 20px 0px;
+  padding: 0 10%;
+  position: relative;
+  width: 100%;
+}
+.input-phone-wrap {
+  float: right;
+  width: 100%;
+  height: 100%;
+  //   margin: 3rem 0;
+}
+#left .input-wrapper .form-input {
+  box-sizing: border-box;
+  font-size: 25px;
+  border: 0;
+  width: 100%;
+  height: 48px;
+  background: #464646;
+  border-radius: 0;
+  margin-top: 0;
+  padding: 0 3.1%;
+  color: #fff;
+}
+.form-input {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 25px;
+  padding: 2.5rem 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  color: $color-white;
+  background: #464646;
+}
+
+input[type="submit"] {
+  border-radius: 0;
+  width: 100%;
+  background: $color-primary;
+  width: 100%;
+  padding: 14px;
+  color: black;
+  font-size: 19px;
+  font-weight: 900;
+  border: none;
+  @include respond(mini-desktop) {
+    margin-top: 1rem;
+  }
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+  color: #6bd7fd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  color: #6bd7fd;
+}
+.tab button:focus {
+  color: #6bd7fd;
+  outline: none !important;
+}
+button.tablinks.tablinks-left.active {
+  color: #6bd7fd;
+}
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 26px 12px;
+  border-top: none;
+}
+#form_section > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 32px 20px;
+  display: block;
+}
+.padding {
+  padding: 0 5%;
+}
+#left .input-wrapper .fancy-label {
+  position: absolute;
+  display: inline-block;
+  font-size: 2.4rem;
+  top: 50%;
+  right: 4.4%;
+  font-weight: 400;
+  transition: 0.1s;
+  transform: translateY(-50%);
+}
+#left .input-wrapper {
+  @include respond(mini-desktop) {
+    height: 50px;
+    margin: 20px 0px 20px 0px;
+    padding: 0 10%;
+    position: relative;
+    width: 100%;
+  }
+}
+.input-wrapper {
+  @include respond(mini-desktop) {
+    position: relative;
+  }
+}
+
+.form-input {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 25px;
+  padding: 2.5rem 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form-input:placeholder {
+  color: transparent;
+}
+.form-input:placeholder-shown ~ .input-label {
+  font-size: 25px;
+  cursor: text;
+  top: 50%;
+  transform: translateY(-50%) translateX(-15%);
+}
+.input-label {
+  position: absolute;
+  top: -45%;
+  display: block;
+  transition: 0.2s;
+  font-size: 20px;
+  transform: translateY(0%);
+  @include respond(mini-desktop) {
+    top: -5%;
+  }
+}
+.form-input:focus ~ .input-label {
+  position: absolute;
+  top: -45%;
+  display: block;
+  transition: 0.2s;
+  font-size: 20px;
+  font-weight: 700;
+  transform: translateY(0%);
+
+  @include respond(mini-desktop) {
+    top: -5%;
+  }
+}
+.form-input:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image-slice: 1;
+}
+.tabcontent-exist {
+  display: none;
+}
