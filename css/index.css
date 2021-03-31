@@ -1291,11 +1291,10 @@ button.tablinks.tablinks-left.active {
 .form-input:placeholder-shown ~ .input-label {
   font-size: 25px;
   cursor: text;
-  top: 50%;
-  transform: translateY(-50%) translateX(-15%);
+  top: 20%;
 }
 
-/* line 681, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
+/* line 682, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
 .input-label {
   position: absolute;
   top: -45%;
@@ -1306,13 +1305,13 @@ button.tablinks.tablinks-left.active {
 }
 
 @media only screen and (max-width: 66.875em) {
-  /* line 681, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
+  /* line 682, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
   .input-label {
     top: -5%;
   }
 }
 
-/* line 692, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
+/* line 693, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
 .form-input:focus ~ .input-label {
   position: absolute;
   top: -45%;
@@ -1324,13 +1323,13 @@ button.tablinks.tablinks-left.active {
 }
 
 @media only screen and (max-width: 66.875em) {
-  /* line 692, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
+  /* line 693, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
   .form-input:focus ~ .input-label {
     top: -5%;
   }
 }
 
-/* line 705, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
+/* line 706, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
 .form-input:focus {
   padding-bottom: 6px;
   font-weight: 700;
@@ -1338,7 +1337,7 @@ button.tablinks.tablinks-left.active {
   border-image-slice: 1;
 }
 
-/* line 711, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
+/* line 712, ../../../../../../../../../../../../../Users/amit_ashdot/Desktop/שיעורי בית/Targetcall/landing-page/march 2021/partner-amazon/partner-amazon/sass/layout/_homepage.scss */
 .tabcontent-exist {
   display: none;
 }
