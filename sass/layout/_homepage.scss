@@ -9,7 +9,7 @@ main {
 a.stripFom {
   display: none;
   position: fixed;
-  top: 0;
+  bottom: 0;
   right: 0;
   z-index: 1;
   width: 80%;
@@ -35,7 +35,7 @@ a.stripFom {
 }
 .right-section {
   margin-inline-end: auto;
-  max-width: 78vw;
+  max-width: 78%;
   position: relative;
 
   @include respond(tab-port) {
@@ -62,8 +62,11 @@ a.stripFom {
     display: flex;
     align-items: flex-end;
     padding: 5rem 0;
+    @include respond(tab-land) {
+      padding: 3rem 0;
+    }
     @include respond(tab-port) {
-      margin-top: 60vw;
+      margin-top: 65vw;
     }
     &__title {
       //   position: absolute;
@@ -76,7 +79,6 @@ a.stripFom {
       font-size: 1.5rem;
       /* text-shadow: 0px 0px 10px #2cd5c4; */
       border: 0px solid green;
-
       @include respond(tab-port) {
         width: 100%;
       }
@@ -115,6 +117,8 @@ a.stripFom {
       }
       &-amazon {
         margin: 4% 0 0 0;
+        animation: 2s swing;
+        animation-iteration-count: infinite;
         & > img {
           width: 60%;
           margin: 0 auto;
@@ -193,7 +197,7 @@ a.stripFom {
     // top: 15%;
     // right: 0;
     left: 0;
-    width: 32%;
+    width: 92%;
     margin: 0 auto;
     color: #ffffff;
     line-height: 115%;
@@ -206,9 +210,28 @@ a.stripFom {
 }
 .flex-container-series {
   display: flex;
+  flex-flow: wrap;
   justify-content: space-evenly;
   @include respond(tab-port) {
     & > div > img {
+      width: 90%;
+    }
+  }
+
+  & > div {
+    width: 29%;
+    transition: all 0.4s;
+    margin: 2rem;
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include respond(tab-port) {
+      width: 33%;
+      margin: 0rem;
+    }
+
+    & > img {
       width: 90%;
     }
   }
@@ -264,7 +287,7 @@ a.stripFom {
       }
 
       @include respond(big-desktop) {
-        margin: 0 0 12.1% 0;
+        // margin: 0 0 12.1% 0;
       }
       @include respond(normal-desktop) {
       }
@@ -429,7 +452,7 @@ a.stripFom {
     background-size: 30%;
     background-position: 5% 7%;
     @include respond(tab-port) {
-background-position: 5% 100%;
+      background-position: 5% 100%;
     }
   }
 
@@ -516,7 +539,9 @@ background-position: 5% 100%;
   padding: 0% 5% 2% 5%;
   display: inline-block;
   box-sizing: border-box;
-
+  &:last-child {
+    margin-bottom: 8rem;
+  }
   h3 {
     color: #ffffff;
     font-size: 1.5em;
@@ -545,10 +570,10 @@ background-position: 5% 100%;
   display: block;
   font-size: 20px;
   width: 22vw;
+  min-width: 260px;
   position: relative;
   left: 0;
   top: 0px;
-
   overflow: hidden;
   background: #262626;
   z-index: 2;
@@ -623,7 +648,7 @@ button {
   padding: 0;
   height: 100%;
   width: 22%;
-
+  min-width: 260px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -647,13 +672,15 @@ button {
 }
 #left .input-wrapper {
   height: 50px;
-  margin: 20px auto 20px;
+  padding: 30px 0px 0px;
+  margin: auto;
+  height: fit-content;
   position: relative;
   width: 100%;
   max-width: 320px;
 }
 .input-phone-wrap {
-  position: relative;
+  // position: relative;
   float: right;
   width: 100%;
   height: 100%;
@@ -708,7 +735,7 @@ input[type="submit"] {
   font-family: inherit;
 
   @include respond(tab-port) {
-margin-top: 3rem;
+    margin-top: 3rem;
   }
 }
 /* Change background color of buttons on hover */
@@ -792,8 +819,14 @@ button.tablinks.tablinks-left.active {
 .form-input:placeholder-shown ~ .input-label {
   font-size: 25px;
   cursor: text;
-  top: 66%;
+  // height: inherit;
+  top: 67%;
   transform: translateY(-50%) translateX(-10%);
+
+  @include respond(tab-port) {
+    top: 66%;
+    // height: fit-content;
+  }
 }
 .input-label {
   position: absolute;
@@ -810,7 +843,7 @@ button.tablinks.tablinks-left.active {
 }
 .form-input:focus ~ .input-label {
   position: absolute;
-  top: -45%;
+  top: 5%;
   display: block;
   transition: 0.2s;
   font-size: 20px;

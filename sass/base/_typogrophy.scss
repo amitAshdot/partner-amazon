@@ -37,6 +37,9 @@ body {
   color: $color-primary;
   text-align: right;
 
+  @include respond(tab-land) {
+    font-size: 8vw;
+  }
   @include respond(tab-port) {
     font-size: 16.2em;
   }

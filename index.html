@@ -598,7 +598,9 @@
 
       <!-- CTA START -->
       <div class="cta-form">
-        <a href="#form_section" class="stripFom">להצטרפות</a>
+        <a href="#form_section" class="stripFom u-mobile" id="stripFom"
+          >להצטרפות</a
+        >
       </div>
       <div class="callPhone u-mobile" id="callpopuplink">
         <img
@@ -654,6 +656,27 @@
     <!-- ONANDOFF -->
     <script type="text/javascript">
       timerPlus("5e2713a553994f0017c86f01");
+
+      const d = new Date();
+      const currentHour = d.getHours(); //note 0-23
+      const cta = document.getElementsByClassName("callPhone");
+      const width = document.body.scrollWidth;
+      const mobileWidth = 900; //max mobile width
+      const sunday = 0;
+      const friday = 5;
+      const openH = 9;
+      const closeH = 18;
+      if (
+        currentHour > openH &&
+        currentHour < closeH &&
+        width < mobileWidth &&
+        d.getDay() >= sunday &&
+        d.getDay() < friday
+      ) {
+        cta[0].style.display = "block";
+      } else {
+        cta[0].style.display = "none";
+      }
     </script>
 
     <!-- END ONANDOFF -->
@@ -832,15 +855,26 @@
         });
       });
 
-      //hide הצטרפות button on input or select focus
-      $("input, select", this).focus(function() {
-        $(".stripFom").hide();
-        console.log("stripFom");
+      $(window).scroll(function() {
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop > 500) {
+          $("#stripFom").fadeIn("slow");
+          clearTimeout($.data(this, "scrollTimer"));
+        } else {
+          clearTimeout($.data(this, "scrollTimer"));
+          $("#stripFom").fadeOut("slow");
+        }
       });
-      //show הצטרפות button on input or select blur
-      $("input, select", this).blur(function() {
-        $(".stripFom").show();
-        console.log("show");
+
+      $(document).ready(function() {
+        $("#stripFom").click(function() {
+          $("html, body").animate(
+            {
+              scrollTop: $("#mobForm").offset().top
+            },
+            2000
+          );
+        });
       });
     </script>
     <script>
@@ -868,7 +902,6 @@
           } else {
             tabcontent[i].style.display = "block";
             tabContentExist[0].style.display = "none";
-            tabContentExist[1].style.display = "none";
           }
         }
 
@@ -882,15 +915,15 @@
     </script>
     <!-- HANDLE PROTOCOL TO HTTPS -->
     <!-- <script>
-      // if (location.protocol !== "https:") {
-      //   location.replace(
-      //     `https:${location.href.substring(location.protocol.length)}`
-      //   );
-      // }
-      if (location.protocol !== "https:") {
-          location.replace(window.location.href.replace("http:", "https:"));
-        }
-    </script> -->
+            // if (location.protocol !== "https:") {
+            //   location.replace(
+            //     `https:${location.href.substring(location.protocol.length)}`
+            //   );
+            // }
+            if (location.protocol !== "https:") {
+                location.replace(window.location.href.replace("http:", "https:"));
+              }
+          </script> -->
 
     <!-- HANDLE PROTOCOL TO HTTPS -->
   </body>
