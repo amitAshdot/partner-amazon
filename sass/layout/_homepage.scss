@@ -5,6 +5,30 @@ main {
   justify-content: center;
   color: $color-white;
 }
+
+a.stripFom {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 80%;
+  color: #000000;
+  font-size: 1em;
+  line-height: 100%;
+  text-align: center;
+  padding: 2rem 0 2rem 0;
+  background: #2cd5c4;
+  text-decoration: none;
+  font-family: "simpler-black";
+  font-size: 2.5rem;
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+  }
+}
+
 .left-section {
   width: 20%;
   flex-grow: 0.2;
@@ -14,7 +38,7 @@ main {
   max-width: 78vw;
   position: relative;
 
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     max-width: 100vw;
   }
 }
@@ -25,7 +49,7 @@ main {
   background-color: #000000;
   background-size: contain;
 
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     background-image: url(https://amitashdot.github.io/partner-amazon/images/bg-mobile.png);
   }
 }
@@ -38,7 +62,7 @@ main {
     display: flex;
     align-items: flex-end;
     padding: 5rem 0;
-    @include respond(mini-desktop) {
+    @include respond(tab-port) {
       margin-top: 60vw;
     }
     &__title {
@@ -53,7 +77,7 @@ main {
       /* text-shadow: 0px 0px 10px #2cd5c4; */
       border: 0px solid green;
 
-      @include respond(mini-desktop) {
+      @include respond(tab-port) {
         width: 100%;
       }
 
@@ -68,7 +92,7 @@ main {
         color: $color-primary;
         font-size: 2vw;
         font-family: "simpler-bold";
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
           font-size: 8vw;
         }
       }
@@ -85,7 +109,7 @@ main {
         font-family: "simpler-bold";
         display: block;
         text-align: center;
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
           font-size: 1.8em;
         }
       }
@@ -102,14 +126,14 @@ main {
         margin: 0.5em 0 0 0;
         //   text-shadow: 0px 0px 12px #ffffff;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
           font-size: 6.5vw;
         }
       }
       &-cond {
         font-size: 1.5rem;
         margin: 2% 0 0 0;
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
           font-size: 1.8rem;
         }
       }
@@ -129,7 +153,7 @@ main {
       background-size: contain;
       background-repeat: no-repeat;
       background-image: url(https://amitashdot.github.io/partner-amazon/images/flag.png);
-      @include respond(mini-desktop) {
+      @include respond(tab-port) {
         position: absolute;
         left: 0;
         width: 24%;
@@ -175,7 +199,7 @@ main {
     line-height: 115%;
     font-size: 1.9em;
     text-align: center;
-    @include respond(mini-desktop) {
+    @include respond(tab-port) {
       width: 100%;
     }
   }
@@ -183,7 +207,7 @@ main {
 .flex-container-series {
   display: flex;
   justify-content: space-evenly;
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     & > div > img {
       width: 90%;
     }
@@ -197,9 +221,10 @@ main {
     font-size: 2em;
     text-align: center;
 
-    @include respond(mini-desktop) {
+    @include respond(tab-port) {
       width: 82%;
       margin: auto;
+      font-size: 2.1em;
     }
   }
   &-flex {
@@ -208,17 +233,27 @@ main {
     flex-wrap: wrap;
     margin: 0 0 0 0;
     padding-top: 2%;
+
     & > div {
       position: relative;
-      width: 80%;
-      //   height: 16em;
-      margin: 0 0 5.1% 0;
+      width: 100%;
+      height: 22.5em;
+      padding: 3% 0 14% 0;
+      background-position: 0 0;
+      background-size: cover;
       background-repeat: no-repeat;
-      //   filter: drop-shadow(0px 0px 16px #2ad5c4);
-      //   filter: drop-shadow(0px 0px 16px rbga($color-primary, 0.5));
-      filter: drop-shadow(0 0rem 2rem rgba($color-primary, 0.4));
-      @include respond(mini-desktop) {
-        filter: drop-shadow(0 0rem 1rem rgba($color-primary, 0.4));
+      background-image: url(../../images/bgBoxWeb.jpeg);
+      background-position-x: 50%;
+      border: 0px solid red;
+
+      @include respond(tab-port) {
+        width: 100%;
+        padding: 6% 0 14% 0;
+        background-image: url(../../images/bgboxmob.jpeg);
+        height: 63.5em;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 0px solid red;
       }
 
       &:last-child {
@@ -237,8 +272,8 @@ main {
       }
       @include respond(tab-land) {
       }
-      @include respond(mini-desktop) {
-        width: 90%;
+      @include respond(tab-port) {
+        width: 100%;
       }
       @include respond(tab-port) {
       }
@@ -249,29 +284,58 @@ main {
     }
   }
   &__card {
+    background: url(../../images/bgboxweb.jpeg);
+    background-position: center;
+    background-size: cover;
+    font-size: 1vw;
+    @include respond(tab-port) {
+      background-image: url(../../images/bgboxmob.jpeg);
+      background-size: 100%;
+    }
+    &--inner {
+      position: relative;
+      width: 89%;
+      height: 17.2em;
+      margin: 1% auto;
+      background-repeat: no-repeat;
+      border: 0px solid cyan;
+
+      @include respond(tab-port) {
+        width: 94.5%;
+        height: 55em;
+        margin: 0% auto;
+      }
+    }
     &-title {
-      position: absolute;
-      top: 16%;
-      right: 0;
       width: 100%;
       text-align: right;
       display: inline-block;
       color: $color-black;
       line-height: normal;
-      @include respond(mini-desktop) {
-        top: 0%;
-        display: contents;
+      margin: 0 0 5% 0;
+      @include respond(tab-port) {
+        font-size: 1em;
+        padding: 5px 1rem;
+        margin-bottom: 1rem;
+      }
+      & > h3 {
+        font-size: 1.8em;
       }
 
       & > p {
         text-align: right;
-        font-size: 2.5rem;
-        background: #2cd5c4;
+        font-size: 1.5em;
+        background: $color-primary;
         display: inline-block;
         padding: 0.5% 1% 0.5% 1%;
         font-family: "simpler-bold";
+        @include respond(tab-port) {
+          font-size: 4em;
+          width: fit-content;
+        }
+
         & > span {
-          @include respond(mini-desktop) {
+          @include respond(tab-port) {
             display: block;
             font-size: 1.4em;
             line-height: 20px;
@@ -282,21 +346,39 @@ main {
     &-text {
       width: 50%;
       float: right;
-      margin: 0 3% 0 0;
+      margin: 0 8% 0 0;
       text-align: right;
       display: inline-block;
-      @include respond(mini-desktop) {
+      overflow: hidden;
+
+      @include respond(tab-port) {
         line-height: 1.7rem;
         font-size: 1.5rem;
       }
+      & > h3 {
+        font-size: 1.8em;
+        @include respond(tab-port) {
+          font-size: initial;
+        }
+      }
 
+      & > p {
+        overflow: hidden;
+      }
       &-left {
         width: 50%;
         float: left;
         display: inline-block;
         margin: 0 0 0 3%;
+        overflow: hidden;
+        & > h3 {
+          font-size: 1.8em;
+          @include respond(tab-port) {
+            font-size: initial;
+          }
+        }
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
           line-height: 1.7rem;
           font-size: 1.5rem;
         }
@@ -304,36 +386,51 @@ main {
     }
   }
 }
+.myIco {
+  display: block;
+  margin-left: auto;
+  margin-top: 5%;
+  width: 7%;
+  margin: 5% 7% 1% auto;
+  @include respond(tab-port) {
+    margin: 7% 7% 1% auto;
+    width: 10%;
+  }
+}
+.left {
+  margin-right: auto;
+}
 .card1 {
-  //   background-position: 5% -15%;
-  background-image: url(https://amitashdot.github.io/partner-amazon/images/1.png);
-  background-size: cover;
-
-  @include respond(mini-desktop) {
-    background-image: url(https://amitashdot.github.io/partner-amazon/images/1-mobile.png);
-    background-size: 100%;
+  &-celeb {
+    background-position: 5% -1%;
+    background-size: 28%;
+    background-image: url(../images/pic_1.png);
+    @include respond(tab-port) {
+      background-position: 5% 96%;
+    }
   }
 }
 .card2 {
-  //   background-position: 97% 241%;
-
-  background-image: url(https://amitashdot.github.io/partner-amazon/images/2.png);
-  background-size: cover;
-
-  @include respond(mini-desktop) {
-    background-image: url(https://amitashdot.github.io/partner-amazon/images/2-mobile.png);
-    background-size: 104%;
+  &-celeb {
+    background-image: url(../images/pic_2.png);
+    background-repeat: no-repeat;
+    background-size: 39%;
+    background-position: 97% 4em;
+    @include respond(tab-port) {
+      background-position: 140% 100%;
+      background-size: 61%;
+    }
   }
 }
 .card3 {
-  //   background-position: 5% -1%;
-
-  background-image: url(https://amitashdot.github.io/partner-amazon/images/3.png);
-  background-size: cover;
-
-  @include respond(mini-desktop) {
-    background-image: url(https://amitashdot.github.io/partner-amazon/images/3-mobile.png);
-    background-size: 100%;
+  &-celeb {
+    background-image: url(../images/pic_3.png);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: 5% 7%;
+    @include respond(tab-port) {
+background-position: 5% 100%;
+    }
   }
 
   & > .u-margin-top-medium > img {
@@ -341,22 +438,20 @@ main {
     height: auto;
     display: block;
     margin: 0 5% 0 0;
-    @include respond(mini-desktop) {
+    @include respond(tab-port) {
       width: 18%;
     }
   }
 }
 .card4 {
-  //   background-position: 97% -16%;
-
-  background-image: url(https://amitashdot.github.io/partner-amazon/images/4.png);
-  background-size: cover;
-
-  @include respond(mini-desktop) {
-    background-image: url(https://amitashdot.github.io/partner-amazon/images/4-mobile.png);
-    background-size: 100%;
-    background-size: 140%;
-    background-position-x: center;
+  &-celeb {
+    background-image: url(../images/pic_4.png);
+    background-repeat: no-repeat;
+    background-size: 33%;
+    background-position: 95% 0%;
+    @include respond(tab-port) {
+      background-position: 95% -100%;
+    }
   }
 
   & > .u-margin-top-medium > img {
@@ -364,22 +459,22 @@ main {
     height: auto;
     display: block;
     margin: 0 46% 0 0;
-    @include respond(mini-desktop) {
+    @include respond(tab-port) {
       width: 18%;
     }
   }
 }
 .card5 {
   //   background-position: 5% -25%;
-
-  background-image: url(https://amitashdot.github.io/partner-amazon/images/5.png);
-  background-size: cover;
-
-  @include respond(mini-desktop) {
-    background-image: url(https://amitashdot.github.io/partner-amazon/images/5-mobile.png);
-    background-size: 100%;
-    background-size: 140%;
-    background-position-x: center;
+  &-celeb {
+    background-image: url(../images/pic_5.png);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: 5% -10%;
+    @include respond(tab-port) {
+      background-size: 33%;
+      background-position: 5% 100%;
+    }
   }
 
   & > .u-margin-top-medium > img {
@@ -387,20 +482,21 @@ main {
     height: auto;
     display: block;
     margin: 0 5% 0 0;
-    @include respond(mini-desktop) {
+    @include respond(tab-port) {
       width: 18%;
     }
   }
 }
 
 .card6 {
-  //   background-position: 94% -16%;
-  background-image: url(https://amitashdot.github.io/partner-amazon/images/6.png);
-  background-size: cover;
-
-  @include respond(mini-desktop) {
-    background-image: url(https://amitashdot.github.io/partner-amazon/images/6-mobile.png);
-    background-size: 100%;
+  &-celeb {
+    background-image: url(../images/pic_6.png);
+    background-repeat: no-repeat;
+    background-size: 33%;
+    background-position: 95% 0%;
+    @include respond(tab-port) {
+      background-position: 95% 4em;
+    }
   }
 
   & > .u-margin-top-medium > img {
@@ -408,7 +504,7 @@ main {
     height: auto;
     display: block;
     margin: 0 46% 0 0;
-    @include respond(mini-desktop) {
+    @include respond(tab-port) {
       width: 18%;
     }
   }
@@ -490,10 +586,10 @@ button {
   padding: 10px 16px;
   transition: 0.3s;
   /*font-size: 17px;*/
-  font-size: 1vw;
+  font-size: 1.1vw;
   flex-grow: 0.4;
 
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     font-size: 4.5vw;
   }
 }
@@ -535,12 +631,12 @@ button {
   -ms-flex-pack: end;
   justify-content: flex-end;
 
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     position: initial;
     width: 100%;
     background: #262626;
     padding: 3rem 2%;
-    height: auto;
+    height: fit-content;
     color: $color-white;
   }
 }
@@ -551,10 +647,10 @@ button {
 }
 #left .input-wrapper {
   height: 50px;
-  margin: 20px 0px 20px 0px;
-  padding: 0 10%;
+  margin: 20px auto 20px;
   position: relative;
   width: 100%;
+  max-width: 320px;
 }
 .input-phone-wrap {
   position: relative;
@@ -581,11 +677,22 @@ button {
   border: 0;
   outline: 0;
   font-size: 25px;
-  padding: 2.5rem 0;
-  background: transparent;
+  padding: 10px 0;
+  margin: 10px 0;
   transition: border-color 0.2s;
-  color: $color-white;
   background: #464646;
+
+  // @include respond(tab-port) {
+  //   font-family: inherit;
+  //   width: 100%;
+  //   border: 0;
+  //   outline: 0;
+  //   font-size: 25px;
+  //   padding: 10px 0;
+  //   margin: 10px 0;
+  //   transition: border-color 0.2s;
+  //   background: #464646;
+  // }
 }
 
 input[type="submit"] {
@@ -598,40 +705,50 @@ input[type="submit"] {
   font-size: 19px;
   font-weight: 900;
   border: none;
-  @include respond(mini-desktop) {
-    margin-top: 1rem;
+  font-family: inherit;
+
+  @include respond(tab-port) {
+margin-top: 3rem;
   }
 }
 /* Change background color of buttons on hover */
 .tab button:hover {
-  color: #6bd7fd;
+  color: $color-primary;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  color: #6bd7fd;
+  color: $color-primary;
 }
 .tab button:focus {
-  color: #6bd7fd;
+  color: $color-primary;
   outline: none !important;
 }
 button.tablinks.tablinks-left.active {
-  color: #6bd7fd;
+  color: $color-primary;
 }
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 26px 12px;
+  padding: 0px 10px 26px 12px;
   border-top: none;
 }
 #form_section > a {
   color: white;
   text-decoration: none;
-  padding: 10px 32px 20px;
+  padding: 10px 15px 20px;
   display: block;
+  font-size: 1vw;
+}
+.form_section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 .padding {
   padding: 3rem 5%;
+  font-size: 2.5rem;
+  text-align: center;
 }
 #left .input-wrapper .fancy-label {
   position: absolute;
@@ -644,7 +761,7 @@ button.tablinks.tablinks-left.active {
   transform: translateY(-50%);
 }
 #left .input-wrapper {
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     height: 50px;
     margin: 20px 0px 20px 0px;
     padding: 0 10%;
@@ -653,7 +770,7 @@ button.tablinks.tablinks-left.active {
   }
 }
 .input-wrapper {
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     position: relative;
   }
 }
@@ -664,10 +781,10 @@ button.tablinks.tablinks-left.active {
   border: 0;
   outline: 0;
   font-size: 25px;
-  padding: 20px 0;
-  //   background: transparent;
+  margin: 25px 0 0;
   transition: border-color 0.2s;
   background: #464646;
+  color: $color-white;
 }
 .form-input:placeholder {
   color: transparent;
@@ -675,8 +792,8 @@ button.tablinks.tablinks-left.active {
 .form-input:placeholder-shown ~ .input-label {
   font-size: 25px;
   cursor: text;
-  top: 50%;
-  transform: translateY(-50%) translateX(-15%);
+  top: 66%;
+  transform: translateY(-50%) translateX(-10%);
 }
 .input-label {
   position: absolute;
@@ -685,8 +802,10 @@ button.tablinks.tablinks-left.active {
   transition: 0.2s;
   font-size: 20px;
   transform: translateY(0%);
-  @include respond(mini-desktop) {
-    top: -5%;
+  color: $color-white;
+  @include respond(tab-port) {
+    top: 8%;
+    font-size: 2rem;
   }
 }
 .form-input:focus ~ .input-label {
@@ -697,9 +816,11 @@ button.tablinks.tablinks-left.active {
   font-size: 20px;
   font-weight: 700;
   transform: translateY(0%);
+  overflow: hidden;
 
-  @include respond(mini-desktop) {
-    top: -5%;
+  @include respond(tab-port) {
+    top: 8%;
+    font-size: 2rem;
   }
 }
 .form-input:focus {
@@ -710,4 +831,61 @@ button.tablinks.tablinks-left.active {
 }
 .tabcontent-exist {
   display: none;
+}
+
+.openstatus {
+  font-size: 1.3vw;
+  margin: 20px 0px 0px 0px;
+  color: white;
+  text-align: center;
+
+  @include respond(tab-port) {
+    font-size: 16px;
+  }
+}
+
+#callpopuplink {
+  position: fixed;
+  top: 85%;
+  left: 10;
+  z-index: 2;
+  width: 30%;
+  max-width: 15rem;
+  border: 0px;
+
+  & > img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  & > p {
+    position: absolute;
+    left: 21%;
+    top: 50%;
+    font-size: 2.5rem;
+    width: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.callpopup {
+  position: fixed;
+  background: #2cd4c2;
+  top: 50%;
+  z-index: 999999;
+  font-size: 5em;
+  text-align: center;
+  color: white;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  padding: 15px 29px 29px;
+  box-shadow: 2px 2px #7e7e7e;
+  font-size: 2.5rem;
+}
+p.callpopuplink_close {
+  float: right;
+}
+.salesphone {
+  margin: 2rem 0;
 }

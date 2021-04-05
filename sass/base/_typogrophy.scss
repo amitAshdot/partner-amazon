@@ -37,7 +37,7 @@ body {
   color: $color-primary;
   text-align: right;
 
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     font-size: 16.2em;
   }
 }
@@ -47,7 +47,7 @@ sub {
   vertical-align: top;
   letter-spacing: initial;
   font-family: "simpler";
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     font-size: 0.25em;
   }
 }
@@ -76,4 +76,25 @@ span.red-text-dark.bold {
   -webkit-text-decoration-line: line-through; /* Safari */
   text-decoration-line: line-through;
   text-decoration-thickness: 1px;
+}
+/* unvisited link */
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* selected link */
+a:active {
+  color: white;
 }
