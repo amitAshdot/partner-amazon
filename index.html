@@ -598,19 +598,17 @@
 
       <!-- CTA START -->
       <div class="cta-form">
-        <a href="#form_section" class="stripFom u-mobile" id="stripFom"
-          >להצטרפות</a
-        >
+        <a href="#mobForm" class="stripFom u-mobile" id="stripFom">להצטרפות</a>
       </div>
       <div class="callPhone u-mobile" id="callpopuplink">
         <img
-          src="./images/call5.png"
+          src="./infinity/images/call5.png"
           alt="כפתור חיוג לנציג"
           title="כפתור חיוג לנציג"
         />
         <p>חייג לנציג</p>
       </div>
-      <div class="callpopup" style="/* display: none; */">
+      <div class="callpopup">
         <p class="callpopuplink_close">X</p>
 
         <div class="salesphone">
@@ -855,9 +853,31 @@
         });
       });
 
+      // $(document).ready(function() {
+      //   var load_flag = true;
+      //   $(document).scroll(function() {
+      //     var mywindow = $(window);
+      //     var mypos = mywindow.scrollTop();
+      //     var up = false;
+      //     var newscroll;
+      //     mywindow.scroll(function() {
+      //       newscroll = mywindow.scrollTop();
+      //       if (newscroll < mypos && !up && mypos > 500) {
+      //         $("#stripFom ").fadeOut();
+
+      //         up = !up;
+      //         console.log(up);
+      //       } else if (newscroll > mypos && up) {
+      //         $("#stripFom ").fadeIn();
+      //         up = !up;
+      //       }
+      //       mypos = newscroll;
+      //     });
+      //   });
+      // });
       $(window).scroll(function() {
         var scrollTop = $(window).scrollTop();
-        if (scrollTop > 500) {
+        if (scrollTop > 500 && $(window).width() < 1080) {
           $("#stripFom").fadeIn("slow");
           clearTimeout($.data(this, "scrollTimer"));
         } else {
@@ -878,11 +898,14 @@
       });
     </script>
     <script>
-      var showfirst = document.getElementById("notCustomer");
+      let showfirst = document.getElementById("notCustomer");
+      let tabContentExist = document.getElementsByClassName("tabcontent-exist");
+      tabContentExist[0].style.display = "none";
+      tabContentExist[1].style.display = "none";
       showfirst.style.display = "block";
       function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        var tabContainer = document.getElementsByClassName("tab-container");
+        let i, tabcontent, tablinks;
+        let tabContainer = document.getElementsByClassName("tab-container");
         for (i = 0; i < tabContainer.length; i++) {
           if (cityName !== "notCustomer") {
             tabContainer[i].classList.remove("changed");
@@ -892,9 +915,9 @@
         }
 
         tabcontent = document.getElementsByClassName("tabcontent");
-        tabContentExist = document.getElementsByClassName("tabcontent-exist");
 
         for (i = 0; i < tabcontent.length; i++) {
+          debugger;
           if (tabContainer[0].classList[1] !== "changed") {
             tabcontent[i].style.display = "none";
             tabContentExist[0].style.display = "block";
@@ -902,6 +925,7 @@
           } else {
             tabcontent[i].style.display = "block";
             tabContentExist[0].style.display = "none";
+            tabContentExist[1].style.display = "none";
           }
         }
 

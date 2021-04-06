@@ -43,14 +43,14 @@ a.stripFom {
   }
 }
 .mainContent {
-  background-image: url(https://amitashdot.github.io/partner-amazon/images/0.png);
+  background-image: url(../images/bgmainweb.jpeg);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-color: #000000;
   background-size: contain;
 
   @include respond(tab-port) {
-    background-image: url(https://amitashdot.github.io/partner-amazon/images/bg-mobile.png);
+    background-image: url("../images/bg-mobile.png");
   }
 }
 .head {
@@ -61,7 +61,7 @@ a.stripFom {
   &-info {
     display: flex;
     align-items: flex-end;
-    padding: 5rem 0;
+    padding: 3rem 0;
     @include respond(tab-land) {
       padding: 3rem 0;
     }
@@ -265,14 +265,14 @@ a.stripFom {
       background-position: 0 0;
       background-size: cover;
       background-repeat: no-repeat;
-      background-image: url(../../images/bgBoxWeb.jpeg);
+      background-image: url(../images/bgboxweb.jpeg);
       background-position-x: 50%;
       border: 0px solid red;
 
       @include respond(tab-port) {
         width: 100%;
         padding: 6% 0 14% 0;
-        background-image: url(../../images/bgboxmob.jpeg);
+        background-image: url(../images/bgboxmob.jpeg);
         height: 63.5em;
         background-size: cover;
         background-repeat: no-repeat;
